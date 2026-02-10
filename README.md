@@ -46,7 +46,9 @@ LM_STUDIO_GLOBAL="http://localhost:1234/v1/chat/completions"
 # Nome exato do modelo que está carregado no seu servidor de IA
 MODEL_NAMEGLOBAL="nome-do-seu-modelo"
 
-🛠️ Detalhes Técnicos e Customização
+---
+
+##  🛠️ Detalhes Técnicos e Customização
 
 1. Compatibilidade de API (OpenAI Standard)
 O bot foi construído sobre o padrão de comunicação da OpenAI. Isso permite que você substitua o LM Studio pelo llama.cpp server ou qualquer outra solução que suporte o endpoint /v1/chat/completions. Basta ajustar a URL e o nome do modelo no arquivo keys.env.
@@ -60,7 +62,7 @@ O Telegram possui um limite rígido de 4096 caracteres por mensagem. Este bot po
 4. Geração de Imagem (Forge/Neo)
 Certifique-se de que o seu Stable Diffusion esteja rodando com a flag --api ativada. A URL padrão configurada no código é http://localhost:7860/sdapi/v1/txt2img.
 
-🚀 Como Executar
+##  🚀 Como Executar
 
 O projeto inclui scripts que gerenciam automaticamente o ambiente virtual (venv) e as dependências (req.txt).
 
@@ -72,7 +74,9 @@ Execute os comandos:
 chmod +x start.sh
 ./start.sh
 
-📂 Organização do Projeto
+---
+
+##  📂 Organização do Projeto
 
 • bot.py: Ponto de entrada, handlers de comandos e segurança.
 • chat.py: Interface de conversação e Visão Computacional.
@@ -81,8 +85,6 @@ chmod +x start.sh
 • pixelart_svg.py: Gerador de código vetorial e lógica de ativos.
 • anotador.py: Gerenciamento do banco de dados SQLite e autorizações.
 • pdf_helper.py: Processamento de documentos e conversão PDF-para-Imagem.
-
-📄 Licença
 
 Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e distribuir conforme necessário.
 
