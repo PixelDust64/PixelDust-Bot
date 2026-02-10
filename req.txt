@@ -1,0 +1,19 @@
+
+# Dependências do Bot Principal
+pyTelegramBotAPI
+python-dotenv
+
+# Dependências da Web (Pesquisa e Scraping)
+requests
+beautifulsoup4
+feedparser
+urllib3
+
+# Dependências de Processamento de Arquivos
+pypdf
+pdf2image
+Pillow
+cairosvg
+# Dependência de Geração de Imagem (usada no módulo imagem_ia)
+# Não é um requisito direto, mas o requests é usado para a API
+requests
