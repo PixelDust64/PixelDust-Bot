@@ -14,6 +14,8 @@ pypdf
 pdf2image
 Pillow
 
+# cairosvg # Descomente se quiser usar a função de pixel art pode não funcionar corretamente no windows sem o GTK
+
 # Dependência de Geração de Imagem (usada no módulo imagem_ia)
 # Não é um requisito direto, mas o requests é usado para a API
 requests
