@@ -22,7 +22,7 @@ Ele transforma seu Telegram em uma central de comando para conversas, pesquisas 
 
 ## ⚠️ Requisito Crítico: GTK Runtime (Windows)
 
-A geração de stickers e o processamento de imagens SVG exigem a biblioteca **CairoSVG**. No Windows, ela depende de arquivos binários (`.dll`) externos. **O bot não iniciará sem o GTK Runtime.**
+A geração de stickers e o processamento de imagens SVG exigem a biblioteca **CairoSVG**. No Windows, ela depende de arquivos binários (`.dll`) externos. **O bot não iniciará sem o GTK Runtime.** precisa ser instalado manualmente.
 
 1.  Baixe o instalador `.exe` (versão win64) em: [GTK for Windows Runtime Releases](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases).
 2.  Instale e certifique-se de marcar a opção **"Add to PATH"** durante o processo.
@@ -36,7 +36,7 @@ A geração de stickers e o processamento de imagens SVG exigem a biblioteca **C
 Mapeamento de Nós (Nodes): Ao utilizar um workflow customizado ou trocar de modelo (ex: migrar de SDXL para Flux), é obrigatório verificar e mapear os IDs dos nós dentro dos arquivos imagem_ia.py e editarimagem_ia.py. O código precisa saber exatamente qual ID de nó corresponde ao prompt positivo, negativo, semente (seed) e carregador de modelo para que a integração funcione. API do Forge: Para uso com Forge/SD-WebUI, certifique-se de que o software foi iniciado com a flag --api ativa.
 
 2. Compatibilidade de API (OpenAI Standard)
-O bot foi construído sobre o padrão de comunicação da OpenAI. Isso permite que você substitua o LM Studio pelo llama.cpp server ou qualquer outra solução que suporte o endpoint /v1/chat/completions. Basta ajustar a URL e o nome do modelo no arquivo keys.env.
+O bot foi construído sobre o padrão de comunicação da OpenAI. Isso permite que você substitua o LM Studio pelo llama.cpp server ou qualquer outra solução que suporte o endpoint /v1/chat/completions, recomenda-se um modelo de visão para funcionar com o multi modal, foi testado com qwen3-vl-8b-v3. Basta ajustar a URL e o nome do modelo no arquivo keys.env.
 
 3. User-Agent e Web Scraping
 Para evitar bloqueios (Erro 403) ao acessar sites para resumo, você pode customizar o User-Agent do navegador simulado dentro do arquivo pesquisa.py, alterando a variável HEADERS.
