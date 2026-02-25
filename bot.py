@@ -12,8 +12,9 @@ import chat
 import pdf_helper
 import pixelart_svg
 import io
-import cairosvg
+# import cairosvg
 from telebot import util
+
 
 
 # --- CARREGAR CONFIGURAÇÕES ---
@@ -223,36 +224,36 @@ def handle_photo_edit(message):
             bot.reply_to(message, f"Erro processando comando: {e}")
 
 
-@bot.message_handler(commands=['pixelart'])
-def cmd_pixel_art(message):
-    uid = message.chat.id
-    if not tem_acesso(message): return
-    
-    prompt = message.text.replace("/pixelart", "").strip()
-    
-    if not prompt:
-        bot.reply_to(message, "🎨 Por favor, diga qual item 64x64 você quer criar.\nEx: `/pixelart Espada de diamante`", parse_mode="Markdown")
-        return
-
-    bot.reply_to(message, "🛠️ Forjando ativo 64x64... Isso pode levar alguns segundos.", parse_mode="Markdown")
-    bot.send_chat_action(uid, 'upload_photo') 
-
-    svg_content, erro = pixelart_svg.gerar_svg_pixel_art(prompt)
-    
-    if erro:
-        bot.reply_to(message, f"❌ **Falha na Forja:**\n_{erro}_", parse_mode="Markdown")
-        return
-
-    try:
-        png_bytes = cairosvg.svg2png(bytestring=svg_content.encode('utf-8'),
-                                    output_width=512,
-                                    output_height=512)
-        
-        bot.send_sticker(uid, png_bytes)
-        bot.send_message(uid, f"✅ Ativo Forjado como Sticker! **Prompt:** _{prompt}_", parse_mode="Markdown")
-
-    except Exception as e:
-        bot.send_message(uid, f"Erro ao gerar Sticker. Falha na conversão SVG->PNG. Erro: _{e}_", parse_mode="Markdown")
+#@bot.message_handler(commands=['pixelart'])
+#def cmd_pixel_art(message):
+#    uid = message.chat.id
+#    if not tem_acesso(message): return
+#    
+#    prompt = message.text.replace("/pixelart", "").strip()
+#    
+#    if not prompt:
+#        bot.reply_to(message, "🎨 Por favor, diga qual item 64x64 você quer criar.\nEx: `/pixelart Espada de diamante`", parse_mode="Markdown")
+#        return
+#
+#    bot.reply_to(message, "🛠️ Forjando ativo 64x64... Isso pode levar alguns segundos.", parse_mode="Markdown")
+#    bot.send_chat_action(uid, 'upload_photo') 
+#
+#    svg_content, erro = pixelart_svg.gerar_svg_pixel_art(prompt)
+#    
+#    if erro:
+#        bot.reply_to(message, f"❌ **Falha na Forja:**\n_{erro}_", parse_mode="Markdown")
+#        return
+#
+#    try:
+#        png_bytes = cairosvg.svg2png(bytestring=svg_content.encode('utf-8'),
+#                                    output_width=512,
+#                                    output_height=512)
+#        
+#        bot.send_sticker(uid, png_bytes)
+#        bot.send_message(uid, f"✅ Ativo Forjado como Sticker! **Prompt:** _{prompt}_", parse_mode="Markdown")
+#
+#    except Exception as e:
+#        bot.send_message(uid, f"Erro ao gerar Sticker. Falha na conversão SVG->PNG. Erro: _{e}_", parse_mode="Markdown")
 
 
 @bot.message_handler(commands=['limpar'])
