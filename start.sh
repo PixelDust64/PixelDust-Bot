@@ -1,10 +1,10 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 
-# entra no diretório do projeto (ajuste se necessário)
-cd /mnt/256/TelgramBot || exit 1
+if [ ! -d "venv" ]; then
+    python3 -m venv venv
+    ./venv/bin/pip install -r req.txt
+fi
 
-# ativa o ambiente virtual
 source venv/bin/activate
-
-# roda o bot
 python bot.py
