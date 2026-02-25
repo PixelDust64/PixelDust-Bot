@@ -92,7 +92,7 @@ MODEL_NAMEGLOBAL="nome-do-seu-modelo"
 ---
 
 ## 📄 Lista de comandos
-
+```
 /start
 /anotar
 /chat
@@ -103,3 +103,4 @@ MODEL_NAMEGLOBAL="nome-do-seu-modelo"
 /gerarimagem
 /pixelart
 /add (admin)
+```
