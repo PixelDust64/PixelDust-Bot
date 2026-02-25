@@ -32,17 +32,18 @@ A geração de stickers e o processamento de imagens SVG exigem a biblioteca **C
 
 ##  🛠️ Detalhes Técnicos e Customização
 
-1. Compatibilidade de API (OpenAI Standard)
+1 Configuração de Rede: Você deve configurar o arquivo keys.env com os endereços IPs (locais ou da sua rede externa) e as faixas de portas onde o Forge ou ComfyUI estão rodando. O bot varrerá essas portas automaticamente para estabelecer a conexão. Workflows Customizados: Para o ComfyUI, o bot utiliza arquivos JSON de workflow. Se desejar usar fluxos personalizados, você deve exportar o JSON (API format) e colocá-lo na pasta imagetemplates/.
+Mapeamento de Nós (Nodes): Ao utilizar um workflow customizado ou trocar de modelo (ex: migrar de SDXL para Flux), é obrigatório verificar e mapear os IDs dos nós dentro dos arquivos imagem_ia.py e editarimagem_ia.py. O código precisa saber exatamente qual ID de nó corresponde ao prompt positivo, negativo, semente (seed) e carregador de modelo para que a integração funcione. API do Forge: Para uso com Forge/SD-WebUI, certifique-se de que o software foi iniciado com a flag --api ativa.
+
+2. Compatibilidade de API (OpenAI Standard)
 O bot foi construído sobre o padrão de comunicação da OpenAI. Isso permite que você substitua o LM Studio pelo llama.cpp server ou qualquer outra solução que suporte o endpoint /v1/chat/completions. Basta ajustar a URL e o nome do modelo no arquivo keys.env.
 
-2. User-Agent e Web Scraping
+3. User-Agent e Web Scraping
 Para evitar bloqueios (Erro 403) ao acessar sites para resumo, você pode customizar o User-Agent do navegador simulado dentro do arquivo pesquisa.py, alterando a variável HEADERS.
 
-3. Limite de Caracteres do Telegram
-O Telegram possui um limite rígido de 4096 caracteres por mensagem. Este bot possui lógica interna para truncar textos muito longos (como resumos extensos de sites ou listagens de banco de dados) para garantir que a mensagem seja entregue sem erros.
+4. Limite de Caracteres do Telegram
+O Telegram possui um limite rígido de 4096 caracteres por mensagem. Este bot possui lógica interna, ao detectar respostas muito longas (como resumos de sites extensos ou conversas profundas com a IA), o bot utiliza a função util.split_string para quebrar o texto em pedaços de aproximadamente 3000 caracteres.Cada pedaço é enviado como uma mensagem sequencial, garantindo que o conteúdo completo seja entregue sem erros e sem perda de informação por truncamento.
 
-4. Geração de Imagem (Forge/Neo)
-Certifique-se de que o seu Stable Diffusion esteja rodando com a flag --api ativada. A URL padrão configurada no código é http://localhost:7860/sdapi/v1/txt2img.
 
 ##  🚀 Como Executar
 
