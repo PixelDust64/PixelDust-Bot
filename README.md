@@ -92,3 +92,15 @@ MODEL_NAMEGLOBAL="nome-do-seu-modelo"
 ---
 
 
+## 📄 Lista de comandos
+
+/start
+/anotar
+/chat
+/listar
+/limpar
+/noticias
+/pesquisar
+/gerarimagem
+/pixelart
+/add (admin)
