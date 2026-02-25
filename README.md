@@ -100,7 +100,8 @@ MODEL_NAMEGLOBAL="nome-do-seu-modelo"
 /limpar
 /noticias
 /pesquisar
-/gerarimagem
-/pixelart
+/gerarimagem modelo | descrição positiva | descrição negativa
+/editar | instrução
+/pixelart descrição
 /add (admin)
 ```
