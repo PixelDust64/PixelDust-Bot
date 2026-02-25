@@ -89,6 +89,11 @@ LM_STUDIO_GLOBAL="http://localhost:1234/v1/chat/completions"
 
 # Nome exato do modelo que está carregado no seu servidor de IA
 MODEL_NAMEGLOBAL="nome-do-seu-modelo"
+
+COMFY_PORT_START / COMFY_PORT_END
+LOCAL_COMFY_STATIC_IP / EXTERMAL_COMFY_STATIC_IP
+FORGE_PORT_START / FORGE_PORT_END
+LOCAL_FORGE_STATIC_IP / EXTERMAL_FORGE_STATIC_IP
 ```
 ---
 
