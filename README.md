@@ -1,6 +1,6 @@
 # 🚀 PixelDust-Bot
 
-**PixelDust-Bot** é um hub de inteligência artificial multimodal operado via Telegram. O projeto é focado em **privacidade e soberania de dados**, rodando inteiramente de forma local através de integrações com **LM Studio**, **llama.cpp** e **Stable Diffusion (Forge/Neo)**.
+**PixelDust-Bot** é um hub de inteligência artificial multimodal operado via Telegram. O projeto é focado em **privacidade e soberania de dados**, rodando inteiramente de forma local através de integrações com **LM Studio**, **llama.cpp** e **Stable Diffusion (Forge/Neo/ComfyUI))**  **Editor de imagem Flux2 (ComfyUI)** .
 
 Ele transforma seu Telegram em uma central de comando para conversas, pesquisas na web, análise de documentos e geração de arte.
 
