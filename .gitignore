@@ -2,3 +2,4 @@ keys.env
 venv/ 
 __pycache__/ 
 *.db 
+notas.db
