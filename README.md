@@ -10,7 +10,7 @@ Ele transforma seu Telegram em uma central de comando para conversas, pesquisas 
 
 *   **🤖 Chat Inteligente (Local LLM):** Integração com APIs compatíveis com o padrão OpenAI (LM Studio, llama.cpp, Ollama). Possui memória de contexto baseada em notas salvas no banco de dados SQLite.
 *   **🖼️ Geração de Imagens:** Interface direta com Stable Diffusion (A1111/Forge/comfyui) via API, com suporte a prompts negativos automáticos, filtros de qualidade e seleção de modelos.
-*   **👾 Pixel Art Engine:** Gera ativos 64x64 via IA e os converte instantaneamente em **Stickers do Telegram** (PNG 512x512) usando a biblioteca CairoSVG.
+*   **👾 Pixel Art Engine:** Gera ativos 64x64 via IA e os converte instantaneamente em **Stickers do Telegram** (PNG 512x512) usando a biblioteca CairoSVG.*
 *   **👁️ Visão Computacional & OCR:** Transcreve imagens e analisa arquivos PDF (mesmo PDFs escaneados, convertendo-os em imagens para que a IA possa "enxergar").
 *   **🌐 Inteligência de Pesquisa:** 
     *   Busca notícias em tempo real via RSS (Google News).
@@ -27,6 +27,7 @@ A geração de stickers e o processamento de imagens SVG exigem a biblioteca **C
 1.  Baixe o instalador `.exe` (versão win64) em: [GTK for Windows Runtime Releases](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases).
 2.  Instale e certifique-se de marcar a opção **"Add to PATH"** durante o processo.
 3.  Reinicie o seu terminal após a instalação.
+4.  A função Pixel art esta comentado e não funcional enquanto analiso alternativas universais 
 
 ---
 
