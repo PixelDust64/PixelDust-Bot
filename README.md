@@ -88,9 +88,8 @@ LM_STUDIO_GLOBAL="http://localhost:1234/v1/chat/completions"
 
 # Nome exato do modelo que está carregado no seu servidor de IA
 MODEL_NAMEGLOBAL="nome-do-seu-modelo"
-
+```
 ---
-
 
 ## 📄 Lista de comandos
 
