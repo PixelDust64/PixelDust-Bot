@@ -20,14 +20,15 @@ Ele transforma seu Telegram em uma central de comando para conversas, pesquisas 
 
 ---
 
-## ⚠️ Requisito Crítico: GTK Runtime (Windows)
+## ⚠️ Requisito Crítico: GTK Runtime (Windows) 
 
 A geração de stickers e o processamento de imagens SVG exigem a biblioteca **CairoSVG**. No Windows, ela depende de arquivos binários (`.dll`) externos. **O bot não iniciará sem o GTK Runtime.** precisa ser instalado manualmente.
 
 1.  Baixe o instalador `.exe` (versão win64) em: [GTK for Windows Runtime Releases](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases).
 2.  Instale e certifique-se de marcar a opção **"Add to PATH"** durante o processo.
 3.  Reinicie o seu terminal após a instalação.
-4.  A função Pixel art esta comentado e não funcional enquanto analiso alternativas universais 
+4.  A função Pixel art esta comentado e não funcional enquanto analiso alternativas universais
+5.  O sistema foi pensado para rodar em linux como um servidor, no windows algumas fuções podem não funcionar.
 
 ---
 
